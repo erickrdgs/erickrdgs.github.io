@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Erick Santana Rodrigues">
+<meta name="keywords" content="">
+<meta name="description" content="body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.">
+
+
+<meta property="og:description" content="body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Speed Dating - Encontros e a regressão linear">
+<meta name="twitter:title" content="Speed Dating - Encontros e a regressão linear">
+<meta property="og:url" content="https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+<meta property="twitter:url" content="https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+<meta property="og:site_name" content="Analises incriveis sobre assuntos irrelevantes. Um portfolio.">
+<meta property="og:description" content="body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.">
+<meta name="twitter:description" content="body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-09-12T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-09-12T00:00:00">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="regression">
+    
+      <meta property="article:tag" content="dating">
+    
+      <meta property="article:tag" content="interactive">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=640">
+
+
+    <title>Speed Dating - Encontros e a regressão linear</title>
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Analises incriveis sobre assuntos irrelevantes. Um portfolio.</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Erick Santana Rodrigues</h4>
+        
+          <h5 class="sidebar-profile-bio">Analista de dados e artista 3D</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/erickrdgs" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Speed Dating - Encontros e a regressão linear
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-12T00:00:00Z">
+        
+  September 12, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <style>
+body {
+text-align: justify}
+</style>
+<blockquote>
+<p>Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.</p>
+</blockquote>
+<div id="visao-geral" class="section level1">
+<h1>Visão Geral</h1>
+<p>Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.</p>
+<pre><code>## Observations: 4,918
+## Variables: 35
+## $ gender   &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,...
+## $ order    &lt;int&gt; 4, 3, 10, 5, 7, 6, 1, 2, 8, 9, 10, 9, 6, 1, 3, 2, 7, ...
+## $ int_corr &lt;dbl&gt; 0.14, 0.54, 0.16, 0.61, 0.21, 0.25, 0.34, 0.50, 0.28,...
+## $ age_o    &lt;int&gt; 27, 22, 22, 23, 24, 25, 30, 27, 28, 24, 27, 22, 22, 2...
+## $ age      &lt;int&gt; 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 24, 24, 24, 2...
+## $ field    &lt;fct&gt; Law, Law, Law, Law, Law, Law, Law, Law, Law, Law, law...
+## $ race     &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2,...
+## $ from     &lt;fct&gt; Chicago, Chicago, Chicago, Chicago, Chicago, Chicago,...
+## $ career   &lt;fct&gt; lawyer, lawyer, lawyer, lawyer, lawyer, lawyer, lawye...
+## $ sports   &lt;int&gt; 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 3, 3, 3, 3, 3, 3, 3, 3,...
+## $ tvsports &lt;int&gt; 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,...
+## $ exercise &lt;int&gt; 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7,...
+## $ dining   &lt;int&gt; 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10,...
+## $ museums  &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8,...
+## $ art      &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 6, 6, 6, 6,...
+## $ hiking   &lt;int&gt; 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 3,...
+## $ gaming   &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 5, 5,...
+## $ clubbing &lt;int&gt; 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 8, 8, 8, 8, 8, 8, 8, 8,...
+## $ reading  &lt;int&gt; 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 10, 10, 10, 10, 10, 10,...
+## $ tv       &lt;int&gt; 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ theater  &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 9, 9, 9, 9, 9, 9, 9, 9,...
+## $ movies   &lt;int&gt; 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 8, 8, 8, 8, 8...
+## $ concerts &lt;int&gt; 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 7, 7, 7, 7, 7...
+## $ music    &lt;int&gt; 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 8, 8, 8, 8, 8, 8, 8, 8,...
+## $ shopping &lt;int&gt; 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 3, 3, 3, 3, 3, 3, 3, 3,...
+## $ yoga     &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,...
+## $ attr     &lt;dbl&gt; 6, 7, 5, 7, 5, 4, 7, 4, 7, 5, 5, 8, 5, 7, 6, 8, 7, 5,...
+## $ sinc     &lt;dbl&gt; 9, 8, 8, 6, 6, 9, 6, 9, 6, 6, 7, 5, 8, 9, 8, 7, 5, 8,...
+## $ intel    &lt;dbl&gt; 7, 7, 9, 8, 7, 7, 7, 7, 8, 6, 8, 6, 9, 7, 7, 8, 9, 7,...
+## $ fun      &lt;dbl&gt; 7, 8, 8, 7, 7, 4, 4, 6, 9, 8, 4, 6, 6, 6, 9, 3, 6, 5,...
+## $ amb      &lt;dbl&gt; 6, 5, 5, 6, 6, 6, 6, 5, 8, 10, 6, 9, 3, 5, 7, 6, 7, 9...
+## $ shar     &lt;dbl&gt; 5, 6, 7, 8, 6, 4, 7, 6, 8, 8, 3, 6, 4, 7, 8, 2, 9, 5,...
+## $ like     &lt;dbl&gt; 7, 7, 7, 7, 6, 6, 6, 6, 7, 6, 6, 7, 6, 7, 8, 6, 8, 5,...
+## $ prob     &lt;dbl&gt; 6, 5, NA, 6, 6, 5, 5, 7, 7, 6, 4, 3, 7, 8, 6, 5, 7, 6...
+## $ match_es &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3,...</code></pre>
+<ul>
+<li>gender: sexo do p1, 0 = mulher.</br></li>
+<li>order: Número (n-ésimo) do encontro, na noite.</br></li>
+<li>int_corr: correlação entre os interesses de p1 e p2.</br></li>
+<li>age_o: idade de p2.</br></li>
+<li>age: idade de p1.</br></li>
+<li>field: campo de estudo de p1.</br></li>
+<li>race: raça de p1. Black=1; European=2; Latino=3; Asian=4; Native American=5; Other=6.</br></li>
+<li>from: de onde p1 é.</br></li>
+<li>career: que carreira p1 quer seguir.</br></li>
+<li>sports ~ yoga: quão interessado p1 é em cada uma dessas atividades (1 a 10).</br></li>
+<li>attr: quão atraente p1 achou p2.</br></li>
+<li>sinc: quão sincero p1 achou p2.</br></li>
+<li>intel: quão inteligente p1 achou p2.</br></li>
+<li>fun: quão divertido p1 achou p2.</br></li>
+<li>amb: quão ambicioso p1 achou p2.</br></li>
+<li>shar: quanto p1 achou que compartilha interesses e hobbies com p2.</br></li>
+<li>like: quanto p1 gostou de p2.</br></li>
+<li>prob: que probabiliade p1 acha que p2 tem de querer se encontrar novamente com ele (1 a 10).</li>
+</ul>
+</div>
+<div id="dados" class="section level1">
+<h1>Dados</h1>
+<blockquote>
+<p>NAs foram removidos para realizar as análises, nos deixando com uma amostra contendo 3663 participantes</p>
+</blockquote>
+<p>Antes de fazer qualquer análise envolvendo regressão irei fazer um descritivo do dados através de algumas rápidas análises.</p>
+<pre class="r"><code>dating$race = as.factor(dating$race)
+
+dating$race &lt;- revalue(dating$race, c(&quot;1&quot;=&quot;Black&quot;, &quot;2&quot;=&quot;European&quot;, &quot;3&quot;=&quot;Latino&quot;, &quot;4&quot;=&quot;Asian&quot;,   &quot;5&quot;=&quot;Native American&quot;, &quot;6&quot;=&quot;Other&quot;))
+
+dating &lt;- na.omit(dating)
+
+dating %&gt;%
+  group_by(gender, race) %&gt;%
+  mutate(sex = ifelse(gender == 0, &quot;Feminino&quot;, &quot;Masculino&quot;)) %&gt;%
+  ggplot(aes(x = race, fill = sex)) +
+  geom_bar(stat = &#39;count&#39;, position=&#39;dodge&#39;) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ggtitle(&quot;Proporção de gênero por raça&quot;) +
+  labs(x = &quot;&quot;, y = &quot;&quot;)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Podemos ver que no conjunto de dados não existem nativo-americanos e que a maior quantidade pessoas de ambos os sexos é Européia. Também é fácil perceber que a proporção de homens e mulheres não varia muito.</p>
+<pre class="r"><code>from&lt;-as.data.frame(table(unlist(dating$from)))
+from&lt;-head(from[order(-from$Freq),])
+
+from %&gt;%
+  ggplot(aes(x = reorder(Var1, Freq),
+             y = Freq,
+             fill = Var1)) +
+  geom_bar(stat = &#39;identity&#39;) +
+  theme(legend.position = &#39;none&#39;, plot.title = element_text(hjust = 0.5)) +
+  ggtitle(&quot;Lugares com maior quantidade de participantes&quot;) +
+  labs(x =&quot;&quot;, y =&quot;&quot;)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Através do gráfico acima é possível ver os estados com maior quantidade de participantes e além disso, que existe uma enorme diferença entre o quarto e o terceiro. Nova York é o lugar com o maior número de participantes.</p>
+<pre class="r"><code>career&lt;-as.data.frame(table(unlist(dating$career)))
+career&lt;-head(career[order(-career$Freq),])
+
+career %&gt;%
+    ggplot(aes(x = reorder(Var1, Freq),
+             y = Freq,
+             fill = Var1)) +
+  geom_bar(stat = &#39;identity&#39;) +
+  theme(legend.position = &#39;none&#39;, plot.title = element_text(hjust = 0.5)) +
+  ggtitle(&quot;Profissões mais populares entre os participantes&quot;) +
+  labs(x =&quot;&quot;, y =&quot;&quot;)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>A profissão mais popular entre os participantes é Advogado.</p>
+<pre class="r"><code>dating %&gt;%
+  mutate(age1 = median(age),
+         sex = ifelse(gender == 0, &quot;Feminino&quot;, &quot;Masculino&quot;)) %&gt;%
+  ggplot(aes(x = age, fill = sex))+
+  geom_bar(color = &#39;black&#39;) +
+  facet_wrap(~sex) +
+  labs(x=&#39;&#39;, y =&#39;&#39;) +
+  ggtitle(&quot;distribuição de idade dos participantes (Feminino x Masculino)&quot;) +
+  theme(legend.position = &#39;none&#39;, plot.title = element_text(hjust = 0.5))</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>De acordo com a distribuição de idade dos participantes podemos ver que para ambos os sexos ela é semelhante e que a grande maioria dos participantes dos chamados encontros relâmpagos tem em torno de 25 (eu diria entre 22 e 28)</p>
+</div>
+<div id="regressao" class="section level1">
+<h1>Regressão</h1>
+<p>Agora que demos uma rápida olhada nos dados, podemos pensar em alguma pergunta envolvendo regressão, mas antes o que é regressão?</p>
+<p>Regressão é uma técnica que permite explorar e inferir a relação de uma variável dependente com variáveis independentes específicas. A análise da regressão pode ser usada como um método descritivo da análise de dados (por exemplo, o ajustamento de curvas) sem serem necessárias quaisquer suposições acerca dos processos que permitiram gerar os dados. Regressão designa também uma equação matemática que descreva a relação entre duas ou mais variáveis.</p>
+</div>
+<div id="pergunta" class="section level1">
+<h1>Pergunta</h1>
+<p>Um fator determinante em um encontro, seja relâmpago ou não, é saber se as duas pessoas gostaram uma da outra. Diante disso, qual a influência de um atributo físico como a beleza em um encontro? Essa influência, seja determinante ou não, é a mesma para ambos os sexos?</p>
+</div>
+<div id="homens" class="section level1">
+<h1>Homens</h1>
+<pre class="r"><code>homens &lt;- dating %&gt;%
+  filter(gender == 1)
+
+modelo_masculino = lm(like ~attr + fun + intel, data = homens)
+tidy(modelo_masculino, conf.int = TRUE)</code></pre>
+<pre><code>## # A tibble: 4 x 7
+##   term        estimate std.error statistic  p.value conf.low conf.high
+##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1 (Intercept)    0.548    0.144       3.81 1.44e- 4    0.266     0.831
+## 2 attr           0.386    0.0178     21.7  4.81e-93    0.351     0.421
+## 3 fun            0.338    0.0195     17.3  3.37e-62    0.300     0.376
+## 4 intel          0.145    0.0213      6.80 1.43e-11    0.103     0.186</code></pre>
+<pre class="r"><code>glance(modelo_masculino)</code></pre>
+<pre><code>## # A tibble: 1 x 11
+##   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC
+## *     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1     0.540         0.539  1.19      704. 1.03e-302     4 -2876. 5761.
+## # ... with 3 more variables: BIC &lt;dbl&gt;, deviance &lt;dbl&gt;, df.residual &lt;int&gt;</code></pre>
+<p>O resultado acima nos dá como resultado à seguinte equação:</p>
+<blockquote>
+<p>like = 0.54 + 0.38 x (attr) + 0.34 x (fun) + 0.14(intel), com R² = 0.54</p>
+</blockquote>
+<p>O valor de 0.54 para o <em>coeficiente de determinação</em> indica que a qualidade do ajuste do modelo é boa.</p>
+<pre class="r"><code>tidy(modelo_masculino, 
+     conf.int = TRUE, 
+     conf.level = 0.95)  %&gt;%
+  filter(term != &quot;(Intercept)&quot;) %&gt;%
+  ggplot(aes(term, estimate, ymin = conf.low, ymax = conf.high)) +
+  geom_errorbar(size = 0.8, width= 0.4) +
+  geom_hline(yintercept = 0, colour = &quot;red&quot;) +
+  labs(x = &quot;Variável&quot;,
+       y = &quot;Valor estimado(95% de confiança)&quot;)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Podemos observar que ambos os atributos atraente, divertida e inteligente tem um impacto positivo, com 95% de confiança, no quanto os participantes do sexo masculino irão gostar do seu par. Isto é, quanto mais atraente, engraçado e inteligente um participante achar seu par, maior a chance de gostar dele. Atributos como beleza e quão divertida a pessoa é são mais decisivos que sua inteligência como pode ser visto no gráfico acima.</p>
+<p>Visualizando o modelo</p>
+<pre class="r"><code>homens %&gt;% 
+    add_residuals(model = modelo_masculino) %&gt;% 
+    ggplot(aes(x = like, y = resid)) + 
+    geom_point(alpha = 0.4, size = 3) + 
+    geom_hline(yintercept = 0)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="mulheres" class="section level1">
+<h1>Mulheres</h1>
+<pre class="r"><code>mulheres &lt;- dating %&gt;%
+  filter(gender == 0)
+
+modelo_feminino = lm(like ~attr + fun + intel, data = mulheres)
+tidy(modelo_feminino, conf.int = TRUE)</code></pre>
+<pre><code>## # A tibble: 4 x 7
+##   term        estimate std.error statistic  p.value conf.low conf.high
+##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1 (Intercept)   -0.101    0.127     -0.792 4.29e- 1   -0.350     0.149
+## 2 attr           0.337    0.0172    19.6   1.45e-77    0.303     0.371
+## 3 fun            0.356    0.0171    20.8   1.94e-86    0.322     0.389
+## 4 intel          0.255    0.0191    13.4   4.48e-39    0.218     0.293</code></pre>
+<pre class="r"><code>glance(modelo_feminino)</code></pre>
+<pre><code>## # A tibble: 1 x 11
+##   r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+## *     &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     0.635         0.635  1.15     1077.       0     4 -2896. 5801. 5829.
+## # ... with 2 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;</code></pre>
+<p>O resultado acima nos dá como resultado à seguinte equação:</p>
+<blockquote>
+<p>like = 0.41 + 0.33(attr) + 0.35(fun) + 0.25(intel), com R² = 0.63</p>
+</blockquote>
+<p>O valor de 0.63 para o <em>coeficiente de determinação</em> indica que a qualidade do ajuste do modelo é melhor que para o modelo masculino.</p>
+<pre class="r"><code>tidy(modelo_feminino, 
+     conf.int = TRUE, 
+     conf.level = 0.95)  %&gt;%
+  filter(term != &quot;(Intercept)&quot;) %&gt;%
+  ggplot(aes(term, estimate, ymin = conf.low, ymax = conf.high)) +
+  geom_errorbar(size = 0.8, width= 0.4) +
+  geom_hline(yintercept = 0, colour = &quot;red&quot;) +
+  labs(x = &quot;Variável&quot;,
+       y = &quot;Valor estimado(95% de confiança)&quot;)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Semelhante aos homens, podemos ver que os atributos atraente e divertido e inteligente tem um impacto positivo, com 95% de confiança, no quanto os participantes do sexo feminino irão gostar do seu par. Sendo a inteligência o fator menos decisivo entre os 3.</p>
+<p>Visualizando o modelo</p>
+<pre class="r"><code>mulheres %&gt;% 
+    add_residuals(model = modelo_feminino) %&gt;% 
+    ggplot(aes(x = like, y = resid)) + 
+    geom_point(alpha = 0.4, size = 3) + 
+    geom_hline(yintercept = 0)</code></pre>
+<p><img src="../../../post/2018-09-12-speed-dating-encontros-e-a-regressão-linear_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/regression/">regression</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/dating/">dating</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/interactive/">interactive</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/cillian-murphy---os-3-tipos-de-filme-de-um-grande-ator/" data-tooltip="Cillian Murphy - Os 3 tipos de filme de um grande ator">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/spotify---analisando-o-arctic-monkeys/" data-tooltip="Spotify - Analisando o Arctic Monkeys">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Erick Santana Rodrigues. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/cillian-murphy---os-3-tipos-de-filme-de-um-grande-ator/" data-tooltip="Cillian Murphy - Os 3 tipos de filme de um grande ator">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/spotify---analisando-o-arctic-monkeys/" data-tooltip="Spotify - Analisando o Arctic Monkeys">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspeed-dating---encontros-e-a-regress%25C3%25A3o-linear%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspeed-dating---encontros-e-a-regress%25C3%25A3o-linear%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspeed-dating---encontros-e-a-regress%25C3%25A3o-linear%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Erick Santana Rodrigues</h4>
+    
+      <div id="about-card-bio">Analista de dados e artista 3D</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Estudante
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Brasil
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/breaking-bad---o-maior-acerto-da-amc/">
+                <h3 class="media-heading">Breaking Bad - O maior acerto da AMC?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Em 2013 foi ao ar Felina, o último episódio de Breaking Bad. Como um dos maiores fenômenos da cultura pop, a aclamada série de TV juntou uma legião de fãs ao redor do mundo, se consagrando como uma das maiores apostas da AMC ficando ao lado de outros gigantes da emissora como Mad Men e The Walking Dead.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/cillian-murphy---os-3-tipos-de-filme-de-um-grande-ator/">
+                <h3 class="media-heading">Cillian Murphy - Os 3 tipos de filme de um grande ator</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Tendo atuado em mais de 30 filmes desde 1998, Cillian Murphy se destacou em 2005 no papel de Espantalho a.k.a Dr. Jonathan Crane em Batman Begins, transformando-se em um grande ator de Hollywood e firmando uma parceria duradoura com o cineasta Christopher Nolan.
+Tendo em vista seu sucesso, irei realizar uma série de análises descritivas em cima de sua filmografia, levando em conta os dados presentes no Rotten Tomatoes.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+                <h3 class="media-heading">Speed Dating - Encontros e a regressão linear</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+                <h3 class="media-heading">Spotify - Analisando o Arctic Monkeys</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
+Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         4 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://erickrdgs.github.io/portfolio/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/erickrdgs.github.io\/portfolio\/2018\/09\/speed-dating---encontros-e-a-regress%C3%A3o-linear\/';
+          
+            this.page.identifier = '\/2018\/09\/speed-dating---encontros-e-a-regress%C3%A3o-linear\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'https-erickrdgs-github-io-portfolio';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

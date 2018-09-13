@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.48 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="Erick Santana Rodrigues">
+<meta name="keywords" content="">
+<meta name="description" content="Análise interativa sobre os dados do Arctic Monkeys no Spotify">
+
+
+<meta property="og:description" content="Análise interativa sobre os dados do Arctic Monkeys no Spotify">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spotify - Analisando o Arctic Monkeys">
+<meta name="twitter:title" content="Spotify - Analisando o Arctic Monkeys">
+<meta property="og:url" content="https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+<meta property="twitter:url" content="https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+<meta property="og:site_name" content="Analises incriveis sobre assuntos irrelevantes. Um portfolio.">
+<meta property="og:description" content="Análise interativa sobre os dados do Arctic Monkeys no Spotify">
+<meta name="twitter:description" content="Análise interativa sobre os dados do Arctic Monkeys no Spotify">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-09-12T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-09-12T00:00:00">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="interactive">
+    
+      <meta property="article:tag" content="spotify">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=640">
+
+
+    <title>Spotify - Analisando o Arctic Monkeys</title>
+
+    <link rel="icon" href="../../../favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="../../../css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="../../../">Analises incriveis sobre assuntos irrelevantes. Um portfolio.</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="../../../#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="../../../#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Erick Santana Rodrigues</h4>
+        
+          <h5 class="sidebar-profile-bio">Analista de dados e artista 3D</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="../../../#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/erickrdgs" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Spotify - Analisando o Arctic Monkeys
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-12T00:00:00Z">
+        
+  September 12, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <script src="../../../rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="../../../rmarkdown-libs/plotly-binding/plotly.js"></script>
+<script src="../../../rmarkdown-libs/typedarray/typedarray.min.js"></script>
+<script src="../../../rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="../../../rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="../../../rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<link href="../../../rmarkdown-libs/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="../../../rmarkdown-libs/plotly-main/plotly-latest.min.js"></script>
+<script src="../../../rmarkdown-libs/chart.js/./dist/Chart.min.js"></script>
+<script src="../../../rmarkdown-libs/chartJSRadar-binding/chartJSRadar.js"></script>
+
+
+<style>
+body {
+text-align: justify}
+</style>
+<blockquote>
+<p>Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.</p>
+</blockquote>
+<div id="visao-geral" class="section level1">
+<h1>Visão Geral:</h1>
+<p>Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</p>
+<pre><code>## Observations: 94
+## Variables: 21
+## $ artist             &lt;chr&gt; &quot;Arctic Monkeys&quot;, &quot;Arctic Monkeys&quot;, &quot;Arctic...
+## $ album_name         &lt;chr&gt; &quot;Whatever People Say I Am, Thats What Im No...
+## $ album_release_date &lt;date&gt; 2006-02-21, 2006-02-21, 2006-02-21, 2006-0...
+## $ album_release_year &lt;int&gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2...
+## $ album_popularity   &lt;int&gt; 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,...
+## $ track_name         &lt;chr&gt; &quot;The View From The Afternoon&quot;, &quot;I Bet You L...
+## $ danceability       &lt;dbl&gt; 0.387, 0.535, 0.454, 0.522, 0.580, 0.599, 0...
+## $ energy             &lt;dbl&gt; 0.922, 0.948, 0.778, 0.889, 0.972, 0.946, 0...
+## $ key                &lt;chr&gt; &quot;A&quot;, &quot;F#&quot;, &quot;A&quot;, &quot;C#&quot;, &quot;B&quot;, &quot;G#&quot;, &quot;A&quot;, &quot;B&quot;, ...
+## $ loudness           &lt;dbl&gt; -5.192, -4.190, -4.225, -4.137, -4.274, -4....
+## $ mode               &lt;chr&gt; &quot;minor&quot;, &quot;minor&quot;, &quot;major&quot;, &quot;major&quot;, &quot;minor&quot;...
+## $ speechiness        &lt;dbl&gt; 0.0674, 0.0356, 0.0449, 0.0461, 0.0589, 0.0...
+## $ acousticness       &lt;dbl&gt; 4.87e-03, 2.25e-03, 9.98e-03, 3.28e-03, 3.8...
+## $ instrumentalness   &lt;dbl&gt; 0.00e+00, 0.00e+00, 0.00e+00, 0.00e+00, 0.0...
+## $ liveness           &lt;dbl&gt; 0.1870, 0.3760, 0.0427, 0.3450, 0.2960, 0.0...
+## $ valence            &lt;dbl&gt; 0.4170, 0.7780, 0.7040, 0.8520, 0.9260, 0.6...
+## $ tempo              &lt;dbl&gt; 146.478, 103.183, 127.158, 144.499, 105.492...
+## $ duration_ms        &lt;dbl&gt; 222947, 173680, 177947, 141133, 130813, 173...
+## $ time_signature     &lt;int&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4...
+## $ key_mode           &lt;chr&gt; &quot;A minor&quot;, &quot;F# minor&quot;, &quot;A major&quot;, &quot;C# major...
+## $ track_popularity   &lt;int&gt; 53, 62, 52, 53, 49, 49, 52, 49, 60, 52, 59,...</code></pre>
+</div>
+<div id="energia-e-valencia" class="section level1">
+<h1>Energia e valência:</h1>
+<p>As músicas de ambas as bandas sempre me pareceram enérgicas e animadas, isso é verdade?</p>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"x":[0.417,0.778,0.704,0.852,0.926,0.653,0.258,0.914,0.312,0.394,0.407,0.656,0.201],"y":[0.922,0.948,0.778,0.889,0.972,0.946,0.333,0.846,0.599,0.914,0.875,0.882,0.881],"text":["track: The View From The Afternoon<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.4170<br />energy: 0.922","track: I Bet You Look Good On The Dancefloor<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.7780<br />energy: 0.948","track: Fake Tales Of San Francisco<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.7040<br />energy: 0.778","track: Dancing Shoes<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.8520<br />energy: 0.889","track: You Probably Couldn't See For The Lights But You Were Staring Straight At Me<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.9260<br />energy: 0.972","track: Still Take You Home<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.6530<br />energy: 0.946","track: Riot Van<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.2580<br />energy: 0.333","track: Red Light Indicates Doors Are Secured<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.9140<br />energy: 0.846","track: Mardy Bum<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.3120<br />energy: 0.599","track: Perhaps Vampires Is A Bit Strong But…<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.3940<br />energy: 0.914","track: When The Sun Goes Down<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.4070<br />energy: 0.875","track: From The Ritz To The Rubble<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.6560<br />energy: 0.882","track: A Certain Romance<br />album: Whatever People Say I Am, Thats What Im Not<br />valence: 0.2010<br />energy: 0.881"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"2006","legendgroup":"2006","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.463,0.823,0.77,0.762,0.79,0.0965,0.624,0.658,0.264,0.538,0.757,0.248],"y":[0.974,0.963,0.925,0.811,0.828,0.399,0.738,0.844,0.805,0.952,0.837,0.866],"text":["track: Brianstorm<br />album: Favourite Worst Nightmare<br />valence: 0.4630<br />energy: 0.974","track: Teddy Picker<br />album: Favourite Worst Nightmare<br />valence: 0.8230<br />energy: 0.963","track: D is for Dangerous<br />album: Favourite Worst Nightmare<br />valence: 0.7700<br />energy: 0.925","track: Balaclava<br />album: Favourite Worst Nightmare<br />valence: 0.7620<br />energy: 0.811","track: Fluorescent Adolescent<br />album: Favourite Worst Nightmare<br />valence: 0.7900<br />energy: 0.828","track: Only Ones Who Know<br />album: Favourite Worst Nightmare<br />valence: 0.0965<br />energy: 0.399","track: Do Me a Favour<br />album: Favourite Worst Nightmare<br />valence: 0.6240<br />energy: 0.738","track: This House is a Circus<br />album: Favourite Worst Nightmare<br />valence: 0.6580<br />energy: 0.844","track: If You Were There, Beware<br />album: Favourite Worst Nightmare<br />valence: 0.2640<br />energy: 0.805","track: The Bad Thing<br />album: Favourite Worst Nightmare<br />valence: 0.5380<br />energy: 0.952","track: Old Yellow Bricks<br />album: Favourite Worst Nightmare<br />valence: 0.7570<br />energy: 0.837","track: 505<br />album: Favourite Worst Nightmare<br />valence: 0.2480<br />energy: 0.866"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(205,150,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(205,150,0,1)"}},"hoveron":"points","name":"2007","legendgroup":"2007","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.51,0.743,0.52,0.5,0.0534,0.39,0.764,0.372,0.289,0.353,0.288,0.649],"y":[0.888,0.926,0.753,0.774,0.465,0.946,0.913,0.874,0.852,0.846,0.646,0.252],"text":["track: The Age Of The Understatement<br />album: The Age Of The Understatement<br />valence: 0.5100<br />energy: 0.888","track: Standing Next To Me<br />album: The Age Of The Understatement<br />valence: 0.7430<br />energy: 0.926","track: Calm Like You<br />album: The Age Of The Understatement<br />valence: 0.5200<br />energy: 0.753","track: Separate And Ever Deadly<br />album: The Age Of The Understatement<br />valence: 0.5000<br />energy: 0.774","track: The Chamber<br />album: The Age Of The Understatement<br />valence: 0.0534<br />energy: 0.465","track: Only The Truth<br />album: The Age Of The Understatement<br />valence: 0.3900<br />energy: 0.946","track: My Mistakes Were Made For You<br />album: The Age Of The Understatement<br />valence: 0.7640<br />energy: 0.913","track: Black Plant<br />album: The Age Of The Understatement<br />valence: 0.3720<br />energy: 0.874","track: I Don't Like You Any More<br />album: The Age Of The Understatement<br />valence: 0.2890<br />energy: 0.852","track: In My Room<br />album: The Age Of The Understatement<br />valence: 0.3530<br />energy: 0.846","track: Meeting Place<br />album: The Age Of The Understatement<br />valence: 0.2880<br />energy: 0.646","track: The Time Has Come Again<br />album: The Age Of The Understatement<br />valence: 0.6490<br />energy: 0.252"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(124,174,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(124,174,0,1)"}},"hoveron":"points","name":"2008","legendgroup":"2008","showlegend":true,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.69,0.67,0.532,0.548,0.767,0.406,0.763,0.543,0.142,0.391],"y":[0.657,0.885,0.922,0.806,0.758,0.61,0.721,0.607,0.896,0.8],"text":["track: My Propeller<br />album: Humbug<br />valence: 0.6900<br />energy: 0.657","track: Crying Lightning<br />album: Humbug<br />valence: 0.6700<br />energy: 0.885","track: Dangerous Animals<br />album: Humbug<br />valence: 0.5320<br />energy: 0.922","track: Secret Door<br />album: Humbug<br />valence: 0.5480<br />energy: 0.806","track: Potion Approaching<br />album: Humbug<br />valence: 0.7670<br />energy: 0.758","track: Fire And The Thud<br />album: Humbug<br />valence: 0.4060<br />energy: 0.610","track: Cornerstone<br />album: Humbug<br />valence: 0.7630<br />energy: 0.721","track: Dance Little Liar<br />album: Humbug<br />valence: 0.5430<br />energy: 0.607","track: Pretty Visitors<br />album: Humbug<br />valence: 0.1420<br />energy: 0.896","track: The Jeweller's Hands<br />album: Humbug<br />valence: 0.3910<br />energy: 0.800"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,190,103,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,190,103,1)"}},"hoveron":"points","name":"2009","legendgroup":"2009","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.731,0.525,0.542,0.788,0.315,0.402,0.531,0.785,0.474,0.554,0.586,0.46],"y":[0.898,0.89,0.807,0.872,0.912,0.939,0.943,0.694,0.865,0.662,0.932,0.883],"text":["track: She's Thunderstorms<br />album: Suck It and See<br />valence: 0.7310<br />energy: 0.898","track: Black Treacle<br />album: Suck It and See<br />valence: 0.5250<br />energy: 0.890","track: Brick By Brick<br />album: Suck It and See<br />valence: 0.5420<br />energy: 0.807","track: The Hellcat Spangled Shalalala<br />album: Suck It and See<br />valence: 0.7880<br />energy: 0.872","track: Don't Sit Down 'Cause I've Moved Your Chair<br />album: Suck It and See<br />valence: 0.3150<br />energy: 0.912","track: Library Pictures<br />album: Suck It and See<br />valence: 0.4020<br />energy: 0.939","track: All My Own Stunts<br />album: Suck It and See<br />valence: 0.5310<br />energy: 0.943","track: Reckless Serenade<br />album: Suck It and See<br />valence: 0.7850<br />energy: 0.694","track: Piledriver Waltz<br />album: Suck It and See<br />valence: 0.4740<br />energy: 0.865","track: Love is a Laserquest<br />album: Suck It and See<br />valence: 0.5540<br />energy: 0.662","track: Suck It and See<br />album: Suck It and See<br />valence: 0.5860<br />energy: 0.932","track: That's Where You're Wrong<br />album: Suck It and See<br />valence: 0.4600<br />energy: 0.883"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"2011","legendgroup":"2011","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.41,0.635,0.863,0.489,0.384,0.582,0.46,0.726,0.796,0.901,0.549,0.435],"y":[0.532,0.763,0.664,0.566,0.847,0.694,0.463,0.952,0.627,0.627,0.54,0.42],"text":["track: Do I Wanna Know?<br />album: AM<br />valence: 0.4100<br />energy: 0.532","track: R U Mine?<br />album: AM<br />valence: 0.6350<br />energy: 0.763","track: One for the Road<br />album: AM<br />valence: 0.8630<br />energy: 0.664","track: Arabella<br />album: AM<br />valence: 0.4890<br />energy: 0.566","track: I Want It All<br />album: AM<br />valence: 0.3840<br />energy: 0.847","track: No.1 Party Anthem<br />album: AM<br />valence: 0.5820<br />energy: 0.694","track: Mad Sounds<br />album: AM<br />valence: 0.4600<br />energy: 0.463","track: Fireside<br />album: AM<br />valence: 0.7260<br />energy: 0.952","track: Why'd You Only Call Me When You're High?<br />album: AM<br />valence: 0.7960<br />energy: 0.627","track: Snap Out of It<br />album: AM<br />valence: 0.9010<br />energy: 0.627","track: Knee Socks<br />album: AM<br />valence: 0.5490<br />energy: 0.540","track: I Wanna Be Yours<br />album: AM<br />valence: 0.4350<br />energy: 0.420"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,169,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,169,255,1)"}},"hoveron":"points","name":"2013","legendgroup":"2013","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.465,0.834,0.69,0.351,0.615,0.465,0.505,0.68,0.267,0.57,0.372,0.777],"y":[0.917,0.716,0.726,0.522,0.743,0.652,0.56,0.79,0.707,0.736,0.594,0.826],"text":["track: Aviation<br />album: Everything Youve Come To Expect<br />valence: 0.4650<br />energy: 0.917","track: Miracle Aligner<br />album: Everything Youve Come To Expect<br />valence: 0.8340<br />energy: 0.716","track: Dracula Teeth<br />album: Everything Youve Come To Expect<br />valence: 0.6900<br />energy: 0.726","track: Everything You've Come To Expect<br />album: Everything Youve Come To Expect<br />valence: 0.3510<br />energy: 0.522","track: The Element Of Surprise<br />album: Everything Youve Come To Expect<br />valence: 0.6150<br />energy: 0.743","track: Bad Habits<br />album: Everything Youve Come To Expect<br />valence: 0.4650<br />energy: 0.652","track: Sweet Dreams, TN<br />album: Everything Youve Come To Expect<br />valence: 0.5050<br />energy: 0.560","track: Used To Be My Girl<br />album: Everything Youve Come To Expect<br />valence: 0.6800<br />energy: 0.790","track: She Does The Woods<br />album: Everything Youve Come To Expect<br />valence: 0.2670<br />energy: 0.707","track: Pattern<br />album: Everything Youve Come To Expect<br />valence: 0.5700<br />energy: 0.736","track: The Dream Synopsis<br />album: Everything Youve Come To Expect<br />valence: 0.3720<br />energy: 0.594","track: The Bourne Identity<br />album: Everything Youve Come To Expect<br />valence: 0.7770<br />energy: 0.826"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(199,124,255,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(199,124,255,1)"}},"hoveron":"points","name":"2016","legendgroup":"2016","showlegend":true,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.673,0.842,0.594,0.781,0.0896,0.676,0.553,0.643,0.445,0.675,0.426],"y":[0.767,0.585,0.865,0.835,0.564,0.863,0.601,0.766,0.773,0.681,0.555],"text":["track: Star Treatment<br />album: Tranquility Base Hotel & Casino<br />valence: 0.6730<br />energy: 0.767","track: One Point Perspective<br />album: Tranquility Base Hotel & Casino<br />valence: 0.8420<br />energy: 0.585","track: American Sports<br />album: Tranquility Base Hotel & Casino<br />valence: 0.5940<br />energy: 0.865","track: Tranquility Base Hotel & Casino<br />album: Tranquility Base Hotel & Casino<br />valence: 0.7810<br />energy: 0.835","track: Golden Trunks<br />album: Tranquility Base Hotel & Casino<br />valence: 0.0896<br />energy: 0.564","track: Four Out Of Five<br />album: Tranquility Base Hotel & Casino<br />valence: 0.6760<br />energy: 0.863","track: The World's First Ever Monster Truck Front Flip<br />album: Tranquility Base Hotel & Casino<br />valence: 0.5530<br />energy: 0.601","track: Science Fiction<br />album: Tranquility Base Hotel & Casino<br />valence: 0.6430<br />energy: 0.766","track: She Looks Like Fun<br />album: Tranquility Base Hotel & Casino<br />valence: 0.4450<br />energy: 0.773","track: Batphone<br />album: Tranquility Base Hotel & Casino<br />valence: 0.6750<br />energy: 0.681","track: The Ultracheese<br />album: Tranquility Base Hotel & Casino<br />valence: 0.4260<br />energy: 0.555"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,97,204,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,97,204,1)"}},"hoveron":"points","name":"2018","legendgroup":"2018","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.5,0.5],"y":[-0.05,1.05],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.5,0.5],"y":[-0.05,1.05],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.05,1.05],"y":[0.5,0.5],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.05,1.05],"y":[0.5,0.5],"text":"","type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":37.9178082191781,"r":7.30593607305936,"b":40.1826484018265,"l":48.9497716894977},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,0.495923026744945],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"scaleanchor":"y","scaleratio":1,"hoverformat":".2f"},"annotations":[{"text":"valence","x":0.5,"y":-0.0176940639269406,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis"},{"text":"energy","x":-0.0191617742987606,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis"},{"text":"Arctic Monkeys","x":0.247961513372472,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"The Last Shadow Puppets","x":0.752038486627528,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"year","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"scaleanchor":"x","scaleratio":1,"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.495923026744945,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.495923026744945,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.504076973255055,"x1":1,"y0":0,"y1":1},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.504076973255055,"x1":1,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[-0.05,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.504076973255055,1],"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"scaleanchor":"y","scaleratio":1,"hoverformat":".2f"},"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.96751968503937},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"source":"A","attrs":{"c24660b6ce2":{"label":{},"label1":{},"x":{},"y":{},"colour":{},"type":"scatter"},"c24693d6a75":{"xintercept":{}},"c246ed275c0":{"yintercept":{}}},"cur_data":"c24660b6ce2","visdat":{"c24660b6ce2":["function (y) ","x"],"c24693d6a75":["function (y) ","x"],"c246ed275c0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+<p>As músicas de ambas as bandas se concentram acima dos quadrantes 3 e 4 (acima de 0.5 em energia), o que diz que sim, elas são enérgicas e o fato de haver uma concentração maior do lado direito indica que elas são mais alegres que tristes. No caso do Arctic Monkeys é mais fácil observar isso pois a maior parte das músicas estão concentradas acima de 0.75 para energia e 0.5 para valência. Já o The Last Shadow Puppets tem os dados mais espalhados.</p>
+</div>
+<div id="popularidade" class="section level1">
+<h1>Popularidade:</h1>
+<p>A popularidade do Arctic Monkeys tem aumentado com o passar dos anos? Como ela é comparada ao The Last Shadow Puppets?</p>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"data":[{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,8,8,8,8,8,8,8,8,8,8,8],"y":[61,61,61,61,61,61,61,61,61,61,61,61,61,72,72,72,72,72,72,72,72,72,72,72,72,55,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,56,56,56,72,72,72,72,72,72,72,72,72,72,72,72,77,77,77,77,77,77,77,77,77,77,77],"text":["album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 61","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 55","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 56","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 72","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77","album_popularity: 77"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Arctic Monkeys","legendgroup":"Arctic Monkeys","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,3,3,3,3,3,3,3,3,3,3,3,7,7,7,7,7,7,7,7,7,7,7,7],"y":[17,17,17,17,17,17,17,17,17,17,17,17,51,51,51,51,51,51,51,51,51,51,51,51],"text":["album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 17","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51","album_popularity: 51"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"The Last Shadow Puppets","legendgroup":"The Last Shadow Puppets","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,8,8,8,8,8,8,8,8,8,8,8],"y":[61,61,61,61,61,61,61,61,61,61,61,61,61,72,72,72,72,72,72,72,72,72,72,72,72,55,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,56,56,56,72,72,72,72,72,72,72,72,72,72,72,72,77,77,77,77,77,77,77,77,77,77,77],"text":["album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Whatever People Say I Am, Thats What Im Not<br />album_popularity: 61","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Favourite Worst Nightmare<br />album_popularity: 72","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Humbug<br />album_popularity: 55","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: Suck It and See<br />album_popularity: 56","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: AM<br />album_popularity: 72","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77","album: Tranquility Base Hotel & Casino<br />album_popularity: 77"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"Arctic Monkeys","legendgroup":"Arctic Monkeys","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,3,3,3,3,3,3,3,3,3,3,3,7,7,7,7,7,7,7,7,7,7,7,7],"y":[17,17,17,17,17,17,17,17,17,17,17,17,51,51,51,51,51,51,51,51,51,51,51,51],"text":["album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: The Age Of The Understatement<br />album_popularity: 17","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51","album: Everything Youve Come To Expect<br />album_popularity: 51"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"The Last Shadow Puppets","legendgroup":"The Last Shadow Puppets","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,8.6],"tickmode":"array","ticktext":["2006","2007","2008","2009","2011","2013","2016","2018"],"tickvals":[1,2,3,4,5,6,7,8],"categoryorder":"array","categoryarray":["2006","2007","2008","2009","2011","2013","2016","2018"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"release year","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[14,80],"tickmode":"array","ticktext":["20","40","60","80"],"tickvals":[20,40,60,80],"categoryorder":"array","categoryarray":["20","40","60","80"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"popularity","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.96751968503937},"annotations":[{"text":"album","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"source":"A","attrs":{"c2455374495":{"x":{},"y":{},"colour":{},"type":"scatter"},"c2431677160":{"label":{},"x":{},"y":{},"colour":{}}},"cur_data":"c2455374495","visdat":{"c2455374495":["function (y) ","x"],"c2431677160":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+<p>Da pra notar que o Arctic Monkeys sempre se manteve próximo dos 60, em termos de popularidade, ou acima desse valor. Seu maior sucesso é o novo disco e desde Suck It And See a banda tem mantido um nível crescente de popularidade. O The Last Shadow Puppets sofreu muito no ínicio, mas teve um aumento considerável no segundo álbum, porém da pra notar que ela é bem menos popular que o AM.</p>
+</div>
+<div id="semelhancas-e-diferencas" class="section level1">
+<h1>Semelhanças e diferenças:</h1>
+<p>Quão parecidas são as músicas mais populares de cada uma das bandas? Escolherei as top 5 do Spotify.</p>
+<canvas id="htmlwidget-3" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"data":{"labels":["danceability","energy","instrumentalness","speechiness","valence "],"datasets":[{"label":"Do I Wanna Know?","data":[0.55,0.532,0.000347,0.032,0.41],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"Fluorescent Adolescent","data":[0.654,0.828,0.000144,0.0281,0.79],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"Four Out Of Five","data":[0.601,0.863,0,0.0685,0.676],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"One Point Perspective","data":[0.714,0.585,0.00444,0.0419,0.842],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"Star Treatment","data":[0.581,0.767,0.00131,0.0527,0.673],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":false,"text":null},"scale":{"ticks":{"max":1,"min":0,"stepSize":0.2,"maxTicksLimit":1000},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":true,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<p>As músicas mais famosas do Arctic Monkeys diferem bastante no quesito valência e um pouco menos em energia (variações maiores que 0.1), nas demais variáveis os valores são próximos (variações próximas de 0.1). A música mais diferente é a “Do I Wanna Know?” a menos enérgica e alegre (valência &lt; 0.5) do grupo.</p>
+<canvas id="htmlwidget-4" class="chartJSRadar html-widget" width="672" height="480"></canvas>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"data":{"labels":["danceability","energy","instrumentalness","speechiness","valence "],"datasets":[{"label":"Aviation","data":[0.356,0.917,0.000851,0.0874,0.465],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"Bad Habits","data":[0.531,0.652,0.00236,0.046,0.465],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"Dracula Teeth","data":[0.448,0.726,0,0.0322,0.69],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"Miracle Aligner","data":[0.561,0.716,2.97e-006,0.0271,0.834],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"Sweet Dreams, TN","data":[0.496,0.56,0,0.0273,0.505],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"}]},"options":{"responsive":true,"title":{"display":false,"text":null},"scale":{"ticks":{"max":1,"min":0,"stepSize":0.2,"maxTicksLimit":1000},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":true,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<p>As faixas mais populares de The Last Shadow Puppets também se mostram diferentes, mas dessa vez em uma intensidade maior, as únicas categorias com valores próximos (variações menores que 0.1) são speechiness e instrumentalness. A música mais diferente é “Aviation”, a mais enérgica do grupo.</p>
+</div>
+<div id="notas-preferidas" class="section level1">
+<h1>Notas preferidas:</h1>
+<p>Qual a nota preferida de cada uma das bandas?</p>
+<div id="htmlwidget-5" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999],"base":[4,0,2,3,0,2,0,4,2,4,3,0],"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[10,1,12,8,6,9,1,6,5,2,8,2],"text":["count: 10<br />key: A","count:  1<br />key: A#","count: 12<br />key: B","count:  8<br />key: C","count:  6<br />key: C#","count:  9<br />key: D","count:  1<br />key: D#","count:  6<br />key: E","count:  5<br />key: F","count:  2<br />key: F#","count:  8<br />key: G","count:  2<br />key: G#"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Arctic Monkeys","legendgroup":"Arctic Monkeys","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999],"base":[0,0,0,0,0,0,0,0],"x":[1,3,4,6,8,9,10,11],"y":[4,2,3,2,4,2,4,3],"text":["count:  4<br />key: A","count:  2<br />key: B","count:  3<br />key: C","count:  2<br />key: D","count:  4<br />key: E","count:  2<br />key: F","count:  4<br />key: F#","count:  3<br />key: G"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"The Last Shadow Puppets","legendgroup":"The Last Shadow Puppets","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":40.1826484018265,"l":37.2602739726027},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,12.6],"tickmode":"array","ticktext":["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"],"tickvals":[1,2,3,4,5,6,7,8,9,10,11,12],"categoryorder":"array","categoryarray":["A","A#","B","C","C#","D","D#","E","F","F#","G","G#"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":"key","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.7,14.7],"tickmode":"array","ticktext":["0","5","10"],"tickvals":[0,5,10],"categoryorder":"array","categoryarray":["0","5","10"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"count","titlefont":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.96751968503937},"annotations":[{"text":"artist","x":1.02,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"left","yanchor":"bottom","legendTitle":true}],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":[{"name":"Collaborate","icon":{"width":1000,"ascent":500,"descent":-50,"path":"M487 375c7-10 9-23 5-36l-79-259c-3-12-11-23-22-31-11-8-22-12-35-12l-263 0c-15 0-29 5-43 15-13 10-23 23-28 37-5 13-5 25-1 37 0 0 0 3 1 7 1 5 1 8 1 11 0 2 0 4-1 6 0 3-1 5-1 6 1 2 2 4 3 6 1 2 2 4 4 6 2 3 4 5 5 7 5 7 9 16 13 26 4 10 7 19 9 26 0 2 0 5 0 9-1 4-1 6 0 8 0 2 2 5 4 8 3 3 5 5 5 7 4 6 8 15 12 26 4 11 7 19 7 26 1 1 0 4 0 9-1 4-1 7 0 8 1 2 3 5 6 8 4 4 6 6 6 7 4 5 8 13 13 24 4 11 7 20 7 28 1 1 0 4 0 7-1 3-1 6-1 7 0 2 1 4 3 6 1 1 3 4 5 6 2 3 3 5 5 6 1 2 3 5 4 9 2 3 3 7 5 10 1 3 2 6 4 10 2 4 4 7 6 9 2 3 4 5 7 7 3 2 7 3 11 3 3 0 8 0 13-1l0-1c7 2 12 2 14 2l218 0c14 0 25-5 32-16 8-10 10-23 6-37l-79-259c-7-22-13-37-20-43-7-7-19-10-37-10l-248 0c-5 0-9-2-11-5-2-3-2-7 0-12 4-13 18-20 41-20l264 0c5 0 10 2 16 5 5 3 8 6 10 11l85 282c2 5 2 10 2 17 7-3 13-7 17-13z m-304 0c-1-3-1-5 0-7 1-1 3-2 6-2l174 0c2 0 4 1 7 2 2 2 4 4 5 7l6 18c0 3 0 5-1 7-1 1-3 2-6 2l-173 0c-3 0-5-1-8-2-2-2-4-4-4-7z m-24-73c-1-3-1-5 0-7 2-2 3-2 6-2l174 0c2 0 5 0 7 2 3 2 4 4 5 7l6 18c1 2 0 5-1 6-1 2-3 3-5 3l-174 0c-3 0-5-1-7-3-3-1-4-4-5-6z"},"click":"function(gd) { \n        // is this being viewed in RStudio?\n        if (location.search == '?viewer_pane=1') {\n          alert('To learn about plotly for collaboration, visit:\\n https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html');\n        } else {\n          window.open('https://cpsievert.github.io/plotly_book/plot-ly-for-collaboration.html', '_blank');\n        }\n      }"}],"cloud":false},"source":"A","attrs":{"c2484346f9":{"x":{},"fill":{},"type":"bar"}},"cur_data":"c2484346f9","visdat":{"c2484346f9":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"base_url":"https://plot.ly"},"evals":["config.modeBarButtonsToAdd.0.click"],"jsHooks":[]}</script>
+<p>Eu esperava que ambas as bandas ‘preferissem’ as mesmas notas, no entanto, as notas mais usadas pelo AM são A e B enquanto que para o The Last Shadow Puppets tais notas são A, E e F#. É interessante notar que existem notas que nunca foram usadas.</p>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="../../../tags/interactive/">interactive</a>
+
+  <a class="tag tag--primary tag--small" href="../../../tags/spotify/">spotify</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/" data-tooltip="Speed Dating - Encontros e a regressão linear">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Erick Santana Rodrigues. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="../../../2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/" data-tooltip="Speed Dating - Encontros e a regressão linear">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspotify---analisando-o-arctic-monkeys%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspotify---analisando-o-arctic-monkeys%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ferickrdgs.github.io%2Fportfolio%2F2018%2F09%2Fspotify---analisando-o-arctic-monkeys%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/ebdca33370a5cd44b8831e678fb82a39?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Erick Santana Rodrigues</h4>
+    
+      <div id="about-card-bio">Analista de dados e artista 3D</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Estudante
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Brasil
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/breaking-bad---o-maior-acerto-da-amc/">
+                <h3 class="media-heading">Breaking Bad - O maior acerto da AMC?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Em 2013 foi ao ar Felina, o último episódio de Breaking Bad. Como um dos maiores fenômenos da cultura pop, a aclamada série de TV juntou uma legião de fãs ao redor do mundo, se consagrando como uma das maiores apostas da AMC ficando ao lado de outros gigantes da emissora como Mad Men e The Walking Dead.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/cillian-murphy---os-3-tipos-de-filme-de-um-grande-ator/">
+                <h3 class="media-heading">Cillian Murphy - Os 3 tipos de filme de um grande ator</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Tendo atuado em mais de 30 filmes desde 1998, Cillian Murphy se destacou em 2005 no papel de Espantalho a.k.a Dr. Jonathan Crane em Batman Begins, transformando-se em um grande ator de Hollywood e firmando uma parceria duradoura com o cineasta Christopher Nolan.
+Tendo em vista seu sucesso, irei realizar uma série de análises descritivas em cima de sua filmografia, levando em conta os dados presentes no Rotten Tomatoes.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/">
+                <h3 class="media-heading">Speed Dating - Encontros e a regressão linear</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://erickrdgs.github.io/portfolio/2018/09/spotify---analisando-o-arctic-monkeys/">
+                <h3 class="media-heading">Spotify - Analisando o Arctic Monkeys</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
+Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         4 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://erickrdgs.github.io/portfolio/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/erickrdgs.github.io\/portfolio\/2018\/09\/spotify---analisando-o-arctic-monkeys\/';
+          
+            this.page.identifier = '\/2018\/09\/spotify---analisando-o-arctic-monkeys\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'https-erickrdgs-github-io-portfolio';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dating on Analises incriveis sobre assuntos irrelevantes. Um portfolio.</title>
+    <link>https://erickrdgs.github.io/portfolio/tags/dating/</link>
+    <description>Recent content in Dating on Analises incriveis sobre assuntos irrelevantes. Um portfolio.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://erickrdgs.github.io/portfolio/tags/dating/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Speed Dating - Encontros e a regressão linear</title>
+      <link>https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://erickrdgs.github.io/portfolio/2018/09/speed-dating---encontros-e-a-regress%C3%A3o-linear/</guid>
+      <description>body { text-align: justify}   Nessa análise serão usados dados descrevendo 5000 encontros relâmpagos (speed dating) de 4 minutos envolvendo 310 jovens americanos. Os dados originais foram coletados por professores da Columbia Business School. Os participantes tinham vários encontros de 4 minutos por noite. Após cada um, preenchiam fichas avaliando aqueles com quem se encontraram. Cada linha nos dados representa um desses encontros.
+ Visão Geral Abaixo podemos ver um sumário do conjunto de dados e uma descrição sobre as variáveis presentes no dataframe.</description>
+    </item>
+    
+  </channel>
+</rss>
