@@ -17,8 +17,9 @@
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/09/spotify-arctic-monkeys/</guid>
-      <description>body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
-Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</description>
+      <description>body {text-align: justify}Usando dados da api do Spotify, irei analisar e comparar as músicas das bandas Arctic Monkeys e The Last Shadow Puppets, ambas são projetos do cantor Alex Turner.
+Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify, para saber com que tipo de informações iremos trabalhar.
+## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic.</description>
     </item>
     
   </channel>

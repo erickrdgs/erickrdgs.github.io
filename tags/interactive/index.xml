@@ -6,10 +6,28 @@
     <description>Recent content in Interactive on Boas analises sobre assuntos irrelevantes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/interactive/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Breaking Bad - A obra prima da AMC?</title>
+      <link>/2018/09/amc/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/amc/</guid>
+      <description>body {text-align: justify}Em 2013 foi ao ar Felina, o último episódio de Breaking Bad. Como um dos maiores fenômenos da cultura pop, a aclamada série de TV juntou uma legião de fãs ao redor do mundo, se consagrando como uma das maiores apostas da AMC ficando ao lado de outros gigantes da emissora como Mad Men e The Walking Dead.</description>
+    </item>
+    
+    <item>
+      <title>Cillian Murphy - Os 3 tipos de filme de um grande ator</title>
+      <link>/2018/09/cillian-murphy/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/cillian-murphy/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Spotify - Arctic Monkeys</title>
@@ -17,8 +35,9 @@
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/09/spotify-arctic-monkeys/</guid>
-      <description>body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
-Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</description>
+      <description>body {text-align: justify}Usando dados da api do Spotify, irei analisar e comparar as músicas das bandas Arctic Monkeys e The Last Shadow Puppets, ambas são projetos do cantor Alex Turner.
+Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify, para saber com que tipo de informações iremos trabalhar.
+## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic.</description>
     </item>
     
   </channel>
