@@ -2,31 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Boas analises sobre assuntos irrelevantes</title>
-    <link>/tags/series/</link>
+    <link>https://erickrdgs.github.io/tags/series/</link>
     <description>Recent content in Series on Boas analises sobre assuntos irrelevantes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://erickrdgs.github.io/tags/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Breaking Bad - A obra prima da AMC?</title>
-      <link>/2018/09/amc/</link>
+      <link>https://erickrdgs.github.io/2018/09/amc/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/amc/</guid>
+      <guid>https://erickrdgs.github.io/2018/09/amc/</guid>
       <description>body {text-align: justify}Em 2013 foi ao ar Felina, o último episódio de Breaking Bad. Como um dos maiores fenômenos da cultura pop, a aclamada série de TV juntou uma legião de fãs ao redor do mundo, se consagrando como uma das maiores apostas da AMC ficando ao lado de outros gigantes da emissora como Mad Men e The Walking Dead.</description>
-    </item>
-    
-    <item>
-      <title>Cillian Murphy - Os 3 tipos de filme de um grande ator</title>
-      <link>/2018/09/cillian-murphy/</link>
-      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/09/cillian-murphy/</guid>
-      <description></description>
     </item>
     
   </channel>
