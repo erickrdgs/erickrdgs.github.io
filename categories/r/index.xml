@@ -6,20 +6,18 @@
     <description>Recent content in R on Boas analises sobre assuntos irrelevantes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/2015/07/hello-r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>Spotify - Arctic Monkeys</title>
+      <link>/2018/09/spotify-arctic-monkeys/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2015/07/hello-r-markdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>/2018/09/spotify-arctic-monkeys/</guid>
+      <description>Test## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic...## $ album_name &amp;lt;chr&amp;gt; &amp;quot;Whatever People Say I Am, Thats What Im No...## $ album_release_date &amp;lt;date&amp;gt; 2006-02-21, 2006-02-21, 2006-02-21, 2006-0...## $ album_release_year &amp;lt;int&amp;gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2...## $ album_popularity &amp;lt;int&amp;gt; 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,...## $ track_name &amp;lt;chr&amp;gt; &amp;quot;The View From The Afternoon&amp;quot;, &amp;quot;I Bet You L.</description>
     </item>
     
   </channel>

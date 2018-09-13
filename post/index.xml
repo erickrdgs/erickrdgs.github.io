@@ -12,23 +12,13 @@
     
     
     <item>
-      <title>Spotify - Analisando o Arctic Monkeys</title>
-      <link>/2018/09/spotify---analisando-o-arctic-monkeys/</link>
+      <title>Spotify - Arctic Monkeys</title>
+      <link>/2018/09/spotify-arctic-monkeys/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/09/spotify---analisando-o-arctic-monkeys/</guid>
-      <description>body {text-align: justify}Usarei a api do Spotify para obter dados sobre as m
-</description>
-    </item>
-    
-    <item>
-      <title>中文測試</title>
-      <link>/2013/10/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/2013/10/chinese-test/</guid>
-      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.
-&lt;/p&gt;</description>
+      <guid>/2018/09/spotify-arctic-monkeys/</guid>
+      <description>body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
+Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</description>
     </item>
     
   </channel>

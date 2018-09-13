@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Boas analises sobre assuntos irrelevantes</title>
+    <link>/tags/music/</link>
+    <description>Recent content in Music on Boas analises sobre assuntos irrelevantes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spotify - Arctic Monkeys</title>
+      <link>/2018/09/spotify-arctic-monkeys/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/spotify-arctic-monkeys/</guid>
+      <description>Test## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic...## $ album_name &amp;lt;chr&amp;gt; &amp;quot;Whatever People Say I Am, Thats What Im No...## $ album_release_date &amp;lt;date&amp;gt; 2006-02-21, 2006-02-21, 2006-02-21, 2006-0...## $ album_release_year &amp;lt;int&amp;gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2...## $ album_popularity &amp;lt;int&amp;gt; 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61,...## $ track_name &amp;lt;chr&amp;gt; &amp;quot;The View From The Afternoon&amp;quot;, &amp;quot;I Bet You L.</description>
+    </item>
+    
+  </channel>
+</rss>
