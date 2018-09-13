@@ -2,30 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Boas analises sobre assuntos irrelevantes</title>
-    <link>https://erickrdgs.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Boas analises sobre assuntos irrelevantes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://erickrdgs.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Breaking Bad - A obra prima da AMC?</title>
-      <link>https://erickrdgs.github.io/2018/09/amc/</link>
+      <link>/2018/09/amc/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://erickrdgs.github.io/2018/09/amc/</guid>
+      <guid>/2018/09/amc/</guid>
       <description>body {text-align: justify}Em 2013 foi ao ar Felina, o último episódio de Breaking Bad. Como um dos maiores fenômenos da cultura pop, a aclamada série de TV juntou uma legião de fãs ao redor do mundo, se consagrando como uma das maiores apostas da AMC ficando ao lado de outros gigantes da emissora como Mad Men e The Walking Dead.</description>
     </item>
     
     <item>
+      <title>Cillian Murphy - Os 3 tipos de filmes de um grande ator</title>
+      <link>/2018/09/movies/</link>
+      <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/09/movies/</guid>
+      <description>body {text-align: justify}Atuando em mais de 30 filmes desde 1998, Cillian Murphy se destacou em 2005 no papel de Espantalho a.k.a Dr. Jonathan Crane em Batman Begins, transformando-se em um grande ator de Hollywood e firmando uma parceria duradoura com o cineasta Christopher Nolan.
+Tendo em vista seu sucesso, irei realizar uma série de análises descritivas em cima de sua filmografia, levando em conta os dados presentes no Rotten Tomatoes.</description>
+    </item>
+    
+    <item>
       <title>Spotify - Arctic Monkeys</title>
-      <link>https://erickrdgs.github.io/2018/09/spotify-arctic-monkeys/</link>
+      <link>/2018/09/spotify-arctic-monkeys/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://erickrdgs.github.io/2018/09/spotify-arctic-monkeys/</guid>
+      <guid>/2018/09/spotify-arctic-monkeys/</guid>
       <description>body {text-align: justify}Usando dados da api do Spotify, irei analisar e comparar as músicas das bandas Arctic Monkeys e The Last Shadow Puppets, ambas são projetos do cantor Alex Turner.
 Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify, para saber com que tipo de informações iremos trabalhar.
 ## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic.</description>

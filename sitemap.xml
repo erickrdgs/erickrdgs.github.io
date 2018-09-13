@@ -3,63 +3,74 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://erickrdgs.github.io/2018/09/amc/</loc>
+    <loc>/2018/09/amc/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/2018/09/spotify-arctic-monkeys/</loc>
+    <loc>/2018/09/movies/</loc>
+    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2018/09/spotify-arctic-monkeys/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/archives/</loc>
+    <loc>/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/tags/interactive/</loc>
+    <loc>/tags/interactive/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/post/</loc>
+    <loc>/tags/movies/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/tags/series/</loc>
+    <loc>/post/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/tags/spotify/</loc>
+    <loc>/tags/series/</loc>
+    <lastmod>2018-09-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/spotify/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://erickrdgs.github.io/tags/tv/</loc>
+    <loc>/tags/tv/</loc>
     <lastmod>2018-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

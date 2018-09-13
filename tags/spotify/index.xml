@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spotify on Boas analises sobre assuntos irrelevantes</title>
-    <link>https://erickrdgs.github.io/tags/spotify/</link>
+    <link>/tags/spotify/</link>
     <description>Recent content in Spotify on Boas analises sobre assuntos irrelevantes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://erickrdgs.github.io/tags/spotify/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/spotify/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spotify - Arctic Monkeys</title>
-      <link>https://erickrdgs.github.io/2018/09/spotify-arctic-monkeys/</link>
+      <link>/2018/09/spotify-arctic-monkeys/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://erickrdgs.github.io/2018/09/spotify-arctic-monkeys/</guid>
+      <guid>/2018/09/spotify-arctic-monkeys/</guid>
       <description>body {text-align: justify}Usando dados da api do Spotify, irei analisar e comparar as músicas das bandas Arctic Monkeys e The Last Shadow Puppets, ambas são projetos do cantor Alex Turner.
 Visão Geral:Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify, para saber com que tipo de informações iremos trabalhar.
 ## Observations: 94## Variables: 21## $ artist &amp;lt;chr&amp;gt; &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic Monkeys&amp;quot;, &amp;quot;Arctic.</description>
