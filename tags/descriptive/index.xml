@@ -1,26 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Descriptive on Analises incriveis sobre assuntos irrelevantes. Um portfolio.</title>
-    <link>/tags/descriptive/</link>
-    <description>Recent content in Descriptive on Analises incriveis sobre assuntos irrelevantes. Um portfolio.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/descriptive/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Jackson do Pandeiro - The king of rithm</title>
-      <link>/2018/05/jackson-do-pandeiro---the-king-of-rithm/</link>
-      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/05/jackson-do-pandeiro---the-king-of-rithm/</guid>
-      <description>body {text-align: justify}Usarei a api do Spotify para obter dados sobre as músicas do Arctic Monkeys e então analisá-las e compará-las com as músicas do The Last Shadow Puppets, outra banda do cantor Alex Turner.
-Visão Geral:oi
-Primeiro uma rápida olhada nos dados disponíveis através da api do Spotify para saber com que tipo de informações iremos trabalhar.</description>
-    </item>
-    
-  </channel>
-</rss>
